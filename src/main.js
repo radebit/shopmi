@@ -6,6 +6,9 @@ import store from './store'
 import App from './App.vue'
 
 //根据前端的跨域方式做调整
+//jsonp或cors跨域：（并且在env里加上参数）
+// axios.defaults.baseURL = 'http://localhost:7005/api';
+//这是代理方式跨域，去vue.config,js里修改域名参数
 axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
 //请求拦截,接口错误拦截

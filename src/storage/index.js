@@ -31,6 +31,7 @@ export default {
     clear(key, moduleName) {
         let val = this.getStorage();
         if (moduleName) {
+            if (!val[moduleName]) return;
             delete val[moduleName][key];
         } else {
             delete val[key];
